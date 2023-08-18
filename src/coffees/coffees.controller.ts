@@ -3,8 +3,8 @@ import {Body, Controller, Get, HttpCode, HttpStatus, Param, Post, Res} from '@ne
 @Controller('coffees')
 export class CoffeesController {
   @Get('flavors')
-  findAll(@Res() response) {
-    response.status(200).send('This actions returns all the coffees.');
+  findAll() {
+    return 'This actions returns all the coffees.';
   }
 
   @Get(':id')
@@ -13,7 +13,6 @@ export class CoffeesController {
   }
 
   @Post()
-  @HttpCode(HttpStatus.GONE)
   create(@Body() body) {
     return body;
   }

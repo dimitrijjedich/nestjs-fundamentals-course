@@ -6,14 +6,13 @@ export class CoffeesController {
   constructor(private readonly coffeesService: CoffeesService) {}
 
   @Get('flavors')
-  findAll(@Query() paginationQuery) {
-    const { limit, offset } = paginationQuery;
-    return `This actions returns all the coffees. Limit: ${limit}, Offset: ${offset}`;
+  findAll() {
+    return this.coffeesService.findAll();
   }
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return `This action returns #${id} coffee`;
+    return this.coffeesService.findOne(id);
   }
 
   @Post()

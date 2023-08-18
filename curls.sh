@@ -25,3 +25,5 @@ curl -X DELETE localhost:3000/coffees/2 -H "Content-Type: application/json"
 
 curl -X POST localhost:3000/coffees -H "Content-Type: application/json" --data '{"id":2, "name":"Testname", "flavors":["flavor1", "flavor2"]}'
 curl -X POST localhost:3000/coffees -H "Content-Type: application/json" --data '{"id":2, "name":"Testname", "brand":"Testbrand", "flavors":[1,2]}'
+
+curl -X PATCH localhost:3000/coffees/1 -H "Content-Type: application/json" --data '{"name":123}'

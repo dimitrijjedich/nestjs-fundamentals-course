@@ -15,3 +15,5 @@ curl -v -X POST localhost:3000/coffees -H "Content-Type: application/json" --dat
 curl -X PATCH localhost:3000/coffees/123 -H "Content-Type: application/json" --data '{"name":"TestName"}'
 
 curl -X DELETE localhost:3000/coffees/123 -H "Content-Type: application/json"
+
+curl "localhost:3000/coffees/flavors?limit=10&offset=5"

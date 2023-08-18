@@ -17,6 +17,6 @@ export class CoffeesService {
   }
 
   findOne(id: string) {
-    this.coffees.find((item) => item.id === +id);
+    return this.coffees.find((item) => item.id === +id);
   }
 }

@@ -1,6 +1,6 @@
 import { Entity } from 'typeorm';
 
-@Entity()
+@Entity('coffee')
 export class Coffee {
   id: number;
   name: string;

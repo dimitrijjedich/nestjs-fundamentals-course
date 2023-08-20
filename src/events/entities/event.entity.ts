@@ -5,7 +5,7 @@ export class Event {
   id: number;
 
   @Column()
-  brand: string;
+  type: string;
 
   @Column()
   name: string;
